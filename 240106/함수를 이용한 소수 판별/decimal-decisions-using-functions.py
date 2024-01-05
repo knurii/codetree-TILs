@@ -1,6 +1,8 @@
 a, b = map(int, input().split())
 
 def is_dec(i):
+    if i < 2:
+        return False
     for j in range(2, i):
         if i % j == 0:
             return False
