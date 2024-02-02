@@ -9,7 +9,9 @@ for i in range(1, n):
     for j in range(1, m):
         for k in range(i + 1, n - 1):
             for l in range(j + 1, m - 1):
-                if arr[0][0] != arr[i][j] and arr[i][j] != grid[k][l] and grid[k][l] != grid[n - 1][m - 1]:
+                if arr[0][0] != arr[i][j] and \ 
+                arr[i][j] != grid[k][l] and \
+                grid[k][l] != grid[n - 1][m - 1]:
                     cnt += 1
 
 print(cnt)
