@@ -4,8 +4,8 @@ for _ in range(n):
     tmp = list(map(int, input().split()))
     graph.append(tmp)
 visited = [
-    [0 for _ in range(n)]
-    for _ in range(m)
+    [0 for _ in range(m)]
+    for _ in range(n)
 ]
 
 def in_range(x, y):
@@ -30,29 +30,3 @@ visited[0][0] = 1
 dfs(0, 0)
 
 print(visited[n - 1][m - 1])
-
-
-# ---
-# n, M = map(int, input().split())
-# graph = [[] for _ in range(n + 1)]
-
-# visited = [False for _ in range(n + 1)]
-# vertex_cnt = 0
-
-# for i in range(M):
-#     v1, v2 = tuple(map(int, input().split()))
-#     graph[v1].append(v2)
-#     graph[v2].append(v1)
-
-# def dfs(vertex):
-#     global vertex_cnt
-#     for curr_v in graph[vertex]:
-#         if not visited[curr_v]:
-#             visited[curr_v] = True
-#             vertex_cnt += 1
-#             dfs(curr_v)
-
-# visited[1] = True
-# dfs(1)
-
-# print(vertex_cnt)
